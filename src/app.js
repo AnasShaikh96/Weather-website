@@ -26,14 +26,14 @@ app.get("/", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-  res.render("about", {
+  res.render("About", {
     title: "About",
     name: "Anas",
   });
 });
 
 app.get("/help", (req, res) => {
-  res.render("help", {
+  res.render("Help", {
     message: "this is a message to you",
     title: "Help",
     name: "Anas",

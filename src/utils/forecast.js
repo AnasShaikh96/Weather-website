@@ -22,7 +22,10 @@ const forecast = (latitude, longitude, callback) => {
           body.forecast["forecastday"][0]["day"]["daily_chance_of_rain"] +
           "% chance of rain, and " +
           body.forecast["forecastday"][0]["day"]["daily_chance_of_snow"] +
-          "% chance of snow today."
+          "% chance of snow today. Average humidity is " +
+          body.forecast["forecastday"][0]["day"]["avghumidity"] +
+          "g.m3. " +
+          body.forecast["forecastday"][0]["day"]["condition"]["text"]
       );
     }
   });
