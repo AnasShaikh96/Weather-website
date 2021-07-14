@@ -18,25 +18,25 @@ hbs.registerPartials(partialsPath);
 
 app.use(express.static(publicDirectoryPath));
 
-app.get("", (req, res) => {
+app.get("/", (req, res) => {
   res.render("index", {
-    title: "some",
-    name: "anas ",
+    title: "Weather",
+    name: "Anas ",
   });
 });
 
 app.get("/about", (req, res) => {
   res.render("about", {
-    title: "me",
-    name: "anas",
+    title: "About",
+    name: "Anas",
   });
 });
 
 app.get("/help", (req, res) => {
   res.render("help", {
     message: "this is a message to you",
-    title: "something",
-    name: "name",
+    title: "Help",
+    name: "Anas",
   });
 });
 
@@ -70,12 +70,6 @@ app.get("/weather", (req, res) => {
       }
     }
   );
-
-  // res.send({
-  //   forecast: "it is raining",
-  //   location: req.query.address,
-  //   message: "your address was found",
-  // });
 });
 
 app.get("/products", (req, res) => {
